@@ -1,11 +1,12 @@
-
-// Linear Search
-// This algorithm searches for a element x in a array in linear fashion.
-// It compares every element of the array with x
-// if true i.e array contains element x so it returns the index of x in the array
-// else it returns -1
+/*
+Linear Search
+This algorithm searches for a element x in a array in linear fashion.
+It compares every element of the array with x
+if true i.e array contains element x so it returns the index of x in the array
+else it returns -1
+*/
 #include <stdio.h>
-// Linear Search implementation
+
 int linearSearch(int arr[],int size,int key){
   for (size_t i = 0; i < size; i++) {
     if(arr[i] == key)
