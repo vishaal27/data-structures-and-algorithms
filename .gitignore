@@ -1,0 +1,4 @@
+# Executable files
+*.out
+# ignore compiled class file
+*.class
