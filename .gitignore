@@ -2,3 +2,5 @@
 *.out
 # ignore compiled class file
 *.class
+# ignore all netrc file
+*.netrc
