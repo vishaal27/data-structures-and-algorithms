@@ -1,6 +1,6 @@
 
  
- class MyLinearSearch {
+ class LinearSearch {
  
     public static int linerSearch(int[] arr, int key){
          
