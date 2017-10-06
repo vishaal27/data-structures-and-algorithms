@@ -1,3 +1,4 @@
+//Swift has indexOf for linear search
 let haystack = ["Zig","Zag","Wally","Ronald","Bush","Krusty","Charlie","Bush","Bozo"]
 for needle in ["Washington","Bush"] {
   if let index = haystack.indexOf(needle) {
