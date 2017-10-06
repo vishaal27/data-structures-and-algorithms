@@ -1,3 +1,4 @@
+//Kotlin has indexOf for linear search
 fun main(args: Array<String>) {
     val haystack = listOf("Zig", "Zag", "Wally", "Ronald", "Bush", "Krusty", "Charlie", "Bush", "Boz", "Zag")
     println(haystack)
