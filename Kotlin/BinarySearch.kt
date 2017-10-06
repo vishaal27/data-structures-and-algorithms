@@ -13,25 +13,25 @@ NB: We add binary search capabilities to arrays.
 
 */
 fun <T : Comparable<T>> Array<T>.iterativeBinarySearch(target: T): Int {
-    var hi = size - 1
-    var lo = 0
-    while (hi >= lo) {
-        val guess = lo + (hi - lo) / 2
-        if (this[guess] > target) hi = guess - 1
-        else if (this[guess] < target) lo = guess + 1
-        else return guess
+    var high = size - 1
+    var low = 0
+    while (high >= low) {
+        val mid = low + (high - low) / 2
+        if (this[mid] > target) high = mid - 1
+        else if (this[mid] < target) low = mid + 1
+        else return mid
     }
     return -1
 }
 
-fun <T : Comparable<T>> Array<T>.recursiveBinarySearch(target: T, lo: Int, hi: Int): Int {
-    if (hi < lo) return -1
+fun <T : Comparable<T>> Array<T>.recursiveBinarySearch(target: T, low: Int, high: Int): Int {
+    if (high < low) return -1
 
-    val guess = (hi + lo) / 2
+    val mid = (high + low) / 2
 
-    return if (this[guess] > target) recursiveBinarySearch(target, lo, guess - 1)
-    else if (this[guess] < target) recursiveBinarySearch(target, guess + 1, hi)
-    else guess
+    return if (this[mid] > target) recursiveBinarySearch(target, low, mid - 1)
+    else if (this[mid] < target) recursiveBinarySearch(target, mid + 1, high)
+    else mid
 }
 
 fun main(args: Array<String>) {
